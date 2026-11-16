@@ -1,0 +1,43 @@
+
+name: Kleinanzeigen synchronisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kleinanzeigen-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: Python installieren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Anzeigen abrufen
+        env:
+          KLAZ_API_KEY: ${{ secrets.KLAZ_API_KEY }}
+          KLAZ_SELLER_ID: ${{ secrets.KLAZ_SELLER_ID }}
+        run: python sync.py
+
+      - name: Anzeigen speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ads.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Anzeigen automatisch aktualisieren"
+            git push
+          fi
