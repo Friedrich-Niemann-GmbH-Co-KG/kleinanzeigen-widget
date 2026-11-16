@@ -3,8 +3,8 @@ name: Kleinanzeigen synchronisieren
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 */6 * * *"
+ schedule:
+  - cron: "17 3 * * *"
 
 permissions:
   contents: write
