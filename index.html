@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Unsere aktuellen Angebote</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+      background: #fff;
+    }
+
+    h1 { font-size: 26px; }
+
+    .angebote {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fill, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .artikel {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .artikel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .inhalt { padding: 15px; }
+
+    .preis {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .button {
+      display: block;
+      padding: 12px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .button:hover { background: #004c99; }
+  </style>
+</head>
+
+<body>
+
+  <h1>Unsere aktuellen Angebote</h1>
+  <div id="angebote" class="angebote">
+    Angebote werden geladen ...
+  </div>
+
+  <script>
+    // Später eure Magento-Kontaktseite eintragen.
+    const CONTACT_URL = "https://example.com/contact/";
+
+    async function ladeAngebote() {
+      const container =
+        document.getElementById("angebote");
+
+      try {
+        const response = await fetch("./ads.json", {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("Angebote nicht verfügbar");
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error("Ungültiges Datenformat");
+        }
+
+        container.replaceChildren();
+
+        if (data.length === 0) {
+          container.textContent =
+            "Aktuell sind keine Angebote vorhanden.";
+          return;
+        }
+
+        data.forEach(anzeige => {
+          const karte = document.createElement("div");
+          karte.className = "artikel";
+
+          if (anzeige.bild) {
+            const bild = document.createElement("img");
+            bild.src = anzeige.bild;
+            bild.alt = anzeige.titel || "Artikelbild";
+            bild.loading = "lazy";
+            karte.appendChild(bild);
+          }
+
+          const inhalt = document.createElement("div");
+          inhalt.className = "inhalt";
+
+          const titel = document.createElement("h3");
+          titel.textContent =
+            anzeige.titel || "Ohne Titel";
+
+          const preis = document.createElement("div");
+          preis.className = "preis";
+          preis.textContent =
+            anzeige.preis || "Preis auf Anfrage";
+
+          const button = document.createElement("a");
+          button.className = "button";
+          button.textContent = "Jetzt anfragen";
+
+          const url = new URL(CONTACT_URL);
+          url.searchParams.set(
+            "artikel", anzeige.id || ""
+          );
+          url.searchParams.set(
+            "titel", anzeige.titel || ""
+          );
+          button.href = url.toString();
+          button.target = "_top";
+
+          inhalt.append(titel, preis, button);
+          karte.appendChild(inhalt);
+          container.appendChild(karte);
+        });
+
+      } catch (error) {
+        container.textContent =
+          "Die Angebote konnten nicht geladen werden.";
+        console.error(error);
+      }
+    }
+
+    ladeAngebote();
+  </script>
+
+</body>
+</html>
