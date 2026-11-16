@@ -2,156 +2,719 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>Unsere aktuellen Angebote</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 
-  <style>
-    * { box-sizing: border-box; }
+<title>Unsere Gebrauchtmaschinen | Friedrich Niemann</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      color: #222;
-      background: #fff;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    h1 { font-size: 26px; }
+body {
+  margin: 0;
+  background: #fff;
+}
 
-    .angebote {
-      display: grid;
-      grid-template-columns:
-        repeat(auto-fill, minmax(230px, 1fr));
-      gap: 20px;
-    }
+#fn-used-machines {
+  --fn-blue: #2473b8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #20252b;
+  background: #fff;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 22px 16px 48px;
+  box-sizing: border-box;
+}
 
-    .artikel {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      background: white;
-    }
+#fn-used-machines * {
+  box-sizing: border-box;
+}
 
-    .artikel img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+/* Überschrift */
 
-    .inhalt { padding: 15px; }
+#fn-used-machines .fn-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e4e7eb;
+}
 
-    .preis {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+#fn-used-machines .fn-eyebrow {
+  color: var(--fn-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
 
-    .button {
-      display: block;
-      padding: 12px;
-      background: #0066cc;
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      border-radius: 5px;
-    }
+#fn-used-machines h2 {
+  margin: 7px 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #161d26;
+}
 
-    .button:hover { background: #004c99; }
-  </style>
+#fn-used-machines .fn-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #596574;
+}
+
+/* Kopfbutton */
+
+#fn-used-machines .fn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 17px;
+  background: var(--fn-blue);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+#fn-used-machines .fn-contact:hover {
+  background: #185a96;
+}
+
+/* Filter */
+
+#fn-used-machines .fn-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#fn-used-machines .fn-tabs {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+#fn-used-machines .fn-tab {
+  background: #f4f6f8;
+  border: 1px solid #dfe5ec;
+  padding: 10px 15px;
+  color: #293747;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#fn-used-machines .fn-tab[aria-pressed="true"] {
+  background: var(--fn-blue);
+  color: #fff;
+  border-color: var(--fn-blue);
+}
+
+#fn-used-machines .fn-count {
+  color: #697482;
+  font-size: 13px;
+}
+
+/* Produktübersicht */
+
+#fn-used-machines .fn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#fn-used-machines .fn-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2e5e9;
+  transition: box-shadow .2s ease;
+}
+
+#fn-used-machines .fn-card:hover {
+  box-shadow: 0 5px 18px rgba(0,0,0,.1);
+}
+
+#fn-used-machines .fn-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 195px;
+  overflow: hidden;
+  background: #f8f9fb;
+  color: #718091;
+  font-size: 13px;
+}
+
+#fn-used-machines .fn-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Produktinformationen */
+
+#fn-used-machines .fn-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 11px;
+  padding: 16px;
+}
+
+#fn-used-machines .fn-name {
+  margin: 0;
+  min-height: 44px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #20252b;
+}
+
+#fn-used-machines .fn-meta {
+  font-size: 12px;
+  color: #718091;
+}
+
+#fn-used-machines .fn-price-label {
+  font-size: 12px;
+  color: #626c78;
+}
+
+#fn-used-machines .fn-price {
+  margin-top: 3px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #20252b;
+}
+
+#fn-used-machines .fn-vat {
+  display: inline;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #626c78;
+  white-space: nowrap;
+}
+
+/* Buttons */
+
+#fn-used-machines .fn-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+#fn-used-machines .fn-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background-color .2s ease;
+}
+
+#fn-used-machines .fn-btn-main {
+  background: #2473b8;
+  border: 1px solid #2473b8;
+  color: #fff !important;
+}
+
+#fn-used-machines .fn-btn-main:hover {
+  background: #185a96;
+}
+
+#fn-used-machines .fn-btn-alt {
+  background: #fff;
+  border: 1px solid #2473b8;
+  color: #2473b8 !important;
+}
+
+#fn-used-machines .fn-btn-alt:hover {
+  background: #2473b8;
+  color: #fff !important;
+}
+
+/* Seitennavigation */
+
+#fn-used-machines .fn-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#fn-used-machines .fn-page {
+  border: 1px solid #d7dee7;
+  background: #fff;
+  color: var(--fn-blue);
+  padding: 9px 13px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+#fn-used-machines .fn-page[aria-current="page"] {
+  background: var(--fn-blue);
+  color: #fff;
+}
+
+#fn-used-machines .fn-note {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #78818c;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  #fn-used-machines .fn-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  #fn-used-machines .fn-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #fn-used-machines .fn-details {
+    padding: 11px;
+  }
+
+  #fn-used-machines .fn-picture {
+    height: 150px;
+  }
+
+  #fn-used-machines .fn-name {
+    font-size: 14px;
+  }
+
+  #fn-used-machines h2 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 420px) {
+  #fn-used-machines .fn-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #fn-used-machines .fn-picture {
+    height: 220px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Unsere aktuellen Angebote</h1>
-  <div id="angebote" class="angebote">
+<div id="fn-used-machines">
+
+  <div class="fn-intro">
+    <div>
+      <span class="fn-eyebrow">
+        Friedrich Niemann · Gebrauchtmaschinen
+      </span>
+
+      <h2>Unsere Gebrauchtmaschinen</h2>
+
+      <p class="fn-subtitle">
+        Angebote aus unserem Kleinanzeigen-Profil
+      </p>
+    </div>
+
+    <a
+      class="fn-contact"
+      href="https://www.kleinanzeigen.de/pro/FN-Kiel"
+      target="_blank"
+      rel="noopener noreferrer">
+      Alle Angebote bei Kleinanzeigen
+    </a>
+  </div>
+
+  <div class="fn-toolbar">
+    <div class="fn-tabs" id="fn-used-tabs">
+
+      <button
+        type="button"
+        class="fn-tab"
+        data-filter="all"
+        aria-pressed="true">
+        Alle Maschinen
+      </button>
+
+      <button
+        type="button"
+        class="fn-tab"
+        data-filter="garden"
+        aria-pressed="false">
+        Garten &amp; Landschaft
+      </button>
+
+      <button
+        type="button"
+        class="fn-tab"
+        data-filter="other"
+        aria-pressed="false">
+        Weitere Maschinen
+      </button>
+
+    </div>
+
+    <span class="fn-count" id="fn-used-count"></span>
+  </div>
+
+  <div class="fn-grid" id="fn-used-grid">
     Angebote werden geladen ...
   </div>
 
-  <script>
-    // Später eure Magento-Kontaktseite eintragen.
-    const CONTACT_URL = "https://example.com/contact/";
+  <div class="fn-pagination" id="fn-used-pages"></div>
 
-    async function ladeAngebote() {
-      const container =
-        document.getElementById("angebote");
+  <p class="fn-note">
+    Preise und Verfügbarkeit können sich ändern.
+    Verbindliche Informationen finden Sie in der
+    jeweiligen Kleinanzeige.
+  </p>
 
-      try {
-        const response = await fetch("./ads.json", {
-          cache: "no-store"
-        });
+</div>
 
-        if (!response.ok) {
-          throw new Error("Angebote nicht verfügbar");
-        }
+<script>
+(function () {
+  'use strict';
 
-        const data = await response.json();
+  const root = document.getElementById('fn-used-machines');
+  const grid = document.getElementById('fn-used-grid');
+  const pages = document.getElementById('fn-used-pages');
+  const count = document.getElementById('fn-used-count');
 
-        if (!Array.isArray(data)) {
-          throw new Error("Ungültiges Datenformat");
-        }
+  const CONTACT_URL =
+    'https://www.fndigital.de/kontakt-gebrauchtmaschinen';
 
-        container.replaceChildren();
+  let data = [];
+  let filter = 'all';
+  let page = 0;
+  const perPage = 12;
 
-        if (data.length === 0) {
-          container.textContent =
-            "Aktuell sind keine Angebote vorhanden.";
-          return;
-        }
+  function safeUrl(value) {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' ? url.href : '';
+    } catch {
+      return '';
+    }
+  }
 
-        data.forEach(anzeige => {
-          const karte = document.createElement("div");
-          karte.className = "artikel";
+  function element(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
 
-          if (anzeige.bild) {
-            const bild = document.createElement("img");
-            bild.src = anzeige.bild;
-            bild.alt = anzeige.titel || "Artikelbild";
-            bild.loading = "lazy";
-            karte.appendChild(bild);
-          }
+  function link(label, href, cls) {
+    const a = element('a', 'fn-btn ' + cls, label);
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    return a;
+  }
 
-          const inhalt = document.createElement("div");
-          inhalt.className = "inhalt";
-
-          const titel = document.createElement("h3");
-          titel.textContent =
-            anzeige.titel || "Ohne Titel";
-
-          const preis = document.createElement("div");
-          preis.className = "preis";
-          preis.textContent =
-            anzeige.preis || "Preis auf Anfrage";
-
-          const button = document.createElement("a");
-          button.className = "button";
-          button.textContent = "Jetzt anfragen";
-
-          const url = new URL(CONTACT_URL);
-          url.searchParams.set(
-            "artikel", anzeige.id || ""
-          );
-          url.searchParams.set(
-            "titel", anzeige.titel || ""
-          );
-          button.href = url.toString();
-          button.target = "_top";
-
-          inhalt.append(titel, preis, button);
-          karte.appendChild(inhalt);
-          container.appendChild(karte);
-        });
-
-      } catch (error) {
-        container.textContent =
-          "Die Angebote konnten nicht geladen werden.";
-        console.error(error);
-      }
+  function preisFormatieren(preis) {
+    if (typeof preis === 'number' && Number.isFinite(preis)) {
+      return new Intl.NumberFormat('de-DE', {
+        style: 'currency',
+        currency: 'EUR'
+      }).format(preis);
     }
 
-    ladeAngebote();
-  </script>
+    if (typeof preis === 'string' && preis.trim()) {
+      return preis;
+    }
+
+    return 'Preis auf Anfrage';
+  }
+
+  function preisVorhanden(preis) {
+    return typeof preis === 'number' ||
+      (typeof preis === 'string' &&
+       preis.trim() !== '' &&
+       preis !== 'Preis auf Anfrage');
+  }
+
+  function anfrageUrl(a) {
+    const formular = new URL(CONTACT_URL);
+    let preis = preisFormatieren(a.price);
+
+    if (preisVorhanden(a.price)) {
+      preis += ' inkl. MwSt.';
+    }
+
+    const info =
+      a.title +
+      ' | Anzeigen-Nr.: ' + a.id +
+      ' | Preis: ' + preis +
+      ' | Kleinanzeigen: ' + (a.url || '');
+
+    formular.searchParams.set('kaufobjekt', info);
+
+    return formular.toString();
+  }
+
+  function inGroup(a) {
+    if (filter === 'all') return true;
+
+    const garden = /garten|pflanzen/i.test(
+      a.category || ''
+    );
+
+    return filter === 'garden' ? garden : !garden;
+  }
+
+  function render() {
+    const selected = data.filter(inGroup);
+    const totalPages = Math.ceil(selected.length / perPage);
+
+    page = Math.min(page, Math.max(0, totalPages - 1));
+
+    grid.replaceChildren();
+    pages.replaceChildren();
+
+    count.textContent = selected.length + ' Angebote';
+
+    if (!selected.length) {
+      grid.textContent =
+        'In dieser Kategorie sind aktuell keine Angebote vorhanden.';
+      return;
+    }
+
+    selected
+      .slice(page * perPage, (page + 1) * perPage)
+      .forEach(function (a) {
+
+        const card = element('article', 'fn-card');
+
+        const href = safeUrl(a.url);
+
+        const picture = element(
+          href ? 'a' : 'div',
+          'fn-picture'
+        );
+
+        if (href) {
+          picture.href = href;
+          picture.target = '_blank';
+          picture.rel = 'noopener noreferrer';
+        }
+
+        const src = safeUrl(a.image);
+
+        if (src) {
+          const img = element('img');
+          img.src = src;
+          img.alt = a.title;
+          img.loading = 'lazy';
+          img.referrerPolicy = 'no-referrer';
+
+          picture.appendChild(img);
+        } else {
+          picture.textContent = 'Kein Bild verfügbar';
+        }
+
+        card.appendChild(picture);
+
+        const details = element('div', 'fn-details');
+
+        details.appendChild(
+          element('h3', 'fn-name', a.title)
+        );
+
+        details.appendChild(
+          element(
+            'div',
+            'fn-meta',
+            'Anzeigen-Nr. ' + a.id
+          )
+        );
+
+        const priceBox = element('div');
+
+        priceBox.appendChild(
+          element(
+            'div',
+            'fn-price-label',
+            'Angebotspreis'
+          )
+        );
+
+        const priceValue = element('div', 'fn-price');
+
+        priceValue.appendChild(
+          element('span', '', preisFormatieren(a.price))
+        );
+
+        if (preisVorhanden(a.price)) {
+          priceValue.appendChild(
+            element('span', 'fn-vat', 'inkl. MwSt.')
+          );
+        }
+
+        priceBox.appendChild(priceValue);
+        details.appendChild(priceBox);
+
+        const buttons = element('div', 'fn-buttons');
+
+        buttons.appendChild(
+          link(
+            'Jetzt anfragen',
+            anfrageUrl(a),
+            'fn-btn-main'
+          )
+        );
+
+        if (href) {
+          buttons.appendChild(
+            link(
+              'Zur Kleinanzeige',
+              href,
+              'fn-btn-alt'
+            )
+          );
+        }
+
+        details.appendChild(buttons);
+        card.appendChild(details);
+        grid.appendChild(card);
+      });
+
+    for (let i = 0; i < totalPages; i++) {
+      const button = element(
+        'button',
+        'fn-page',
+        String(i + 1)
+      );
+
+      button.type = 'button';
+
+      if (i === page) {
+        button.setAttribute('aria-current', 'page');
+      }
+
+      button.addEventListener('click', function () {
+        page = i;
+        render();
+
+        root.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+
+      pages.appendChild(button);
+    }
+  }
+
+  async function ladeAngebote() {
+    try {
+      const response = await fetch('./ads.json', {
+        cache: 'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error('ads.json nicht erreichbar');
+      }
+
+      const json = await response.json();
+
+      // Unterstützt beide JSON-Formate:
+      // [ ... ] und { "ads": [ ... ] }
+      const rawAds = Array.isArray(json)
+        ? json
+        : json.ads;
+
+      if (!Array.isArray(rawAds)) {
+        throw new Error('Ungültiges Anzeigenformat');
+      }
+
+      data = rawAds.map(function (a) {
+        return {
+          id: String(a.id || a.ad_id || ''),
+          title: a.titel || a.title || 'Ohne Titel',
+          price: a.preis !== undefined
+            ? a.preis
+            : a.price,
+          image: a.bild || a.image || '',
+          url: a.url || '',
+          category: a.category || a.kategorie || ''
+        };
+      });
+
+      render();
+
+    } catch (error) {
+      console.error('Kleinanzeigen-Fehler:', error);
+
+      grid.textContent =
+        'Die Angebote konnten nicht geladen werden.';
+
+      count.textContent = '';
+    }
+  }
+
+  document.getElementById('fn-used-tabs')
+    .addEventListener('click', function (event) {
+
+      const button = event.target.closest(
+        'button[data-filter]'
+      );
+
+      if (!button) return;
+
+      filter = button.dataset.filter;
+      page = 0;
+
+      root.querySelectorAll('.fn-tab')
+        .forEach(function (tab) {
+          tab.setAttribute(
+            'aria-pressed',
+            String(tab === button)
+          );
+        });
+
+      render();
+    });
+
+  ladeAngebote();
+
+})();
+</script>
 
 </body>
 </html>
