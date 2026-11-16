@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "TEST-001",
+    "titel": "Testartikel 1",
+    "preis": "249,00 €",
+    "bild": "https://placehold.co/600x400?text=Testartikel+1"
+  },
+  {
+    "id": "TEST-002",
+    "titel": "Testartikel 2",
+    "preis": "399,00 €",
+    "bild": "https://placehold.co/600x400?text=Testartikel+2"
+  }
+]
