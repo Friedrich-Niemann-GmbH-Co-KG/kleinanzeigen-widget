@@ -1,15 +1,140 @@
-
 [
   {
-    "id": "TEST-001",
-    "titel": "Testartikel 1",
-    "preis": "249,00 €",
-    "bild": "https://placehold.co/600x400?text=Testartikel+1"
+    "id": "3487639168",
+    "titel": "Spit Pulsa 40P+ Gasnagelgerät",
+    "preis": "606,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/19/19720011-8951-4123-b2b8-5a032a6225b5?rule=$_57.AUTO"
   },
   {
-    "id": "TEST-002",
-    "titel": "Testartikel 2",
-    "preis": "399,00 €",
-    "bild": "https://placehold.co/600x400?text=Testartikel+2"
+    "id": "3568958804",
+    "titel": "Manitou MT 1840 Privileg",
+    "preis": "47.481,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d7/d7221eac-6d42-4eee-a26d-1db2e0ba8f19?rule=$_57.AUTO"
+  },
+  {
+    "id": "3478403249",
+    "titel": "WEIRO SINUS B22 Bauwagen – Baujahr 2023",
+    "preis": "5.415,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/45/450bb1cc-2564-45f2-aa4f-85d0ec4c4409?rule=$_57.AUTO"
+  },
+  {
+    "id": "3478349299",
+    "titel": "AVOLA T2V 315 Tischkreissäge / Steinkappsäge",
+    "preis": "594,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a6/a6d6e3d9-4f7b-44c9-94a0-3c6989f95454?rule=$_57.AUTO"
+  },
+  {
+    "id": "3478381531",
+    "titel": "STEIN-REX Kleinkran basic - STR 10-20 / 4",
+    "preis": "20.301,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/72/72603905-c956-4f50-a250-aa3e0471f783?rule=$_57.AUTO"
+  },
+  {
+    "id": "3477851714",
+    "titel": "CESAB S210 Elektro-Hochhubwagen – 1.000 kg – Hubhöhe 2.900 mm",
+    "preis": "3.275,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ba/baaf98ad-0cd2-46b3-9968-21fb15cfe0f3?rule=$_57.AUTO"
+  },
+  {
+    "id": "3477785386",
+    "titel": "Avola Tischkreissäge IC450",
+    "preis": "800,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/9a/9afd6cbb-c153-492a-afab-69cbd0e404c0?rule=$_57.AUTO"
+  },
+  {
+    "id": "3477800671",
+    "titel": "Böcker Toplift Standard 250 kg – Baujahr 2024 – inkl. 12-m-Paket",
+    "preis": "5.660,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/de/de607887-6556-4837-84dc-722b7fc6c535?rule=$_57.AUTO"
+  },
+  {
+    "id": "3477841903",
+    "titel": "CESAB P216 Elektro-Niederhubwagen – 1.600 kg – Baujahr 2023",
+    "preis": "4.165,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/71/71441d51-217b-4a51-b238-0f09cfd991ac?rule=$_57.AUTO"
+  },
+  {
+    "id": "3477831865",
+    "titel": "CESAB P216 Elektro-Niederhubwagen – 1.600 kg – Baujahr 2021",
+    "preis": "2.975,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/03/03e5de0a-5998-44ea-b03c-13c02d5b2cbb?rule=$_57.AUTO"
+  },
+  {
+    "id": "3559814554",
+    "titel": "Eichinger Betonsilo 1017.12 1000 Liter",
+    "preis": "893,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c6c590f4-5738-49cb-8b30-93e9d619fdc9?rule=$_57.AUTO"
+  },
+  {
+    "id": "3559813760",
+    "titel": "Eichinger Betonsilo 1017.12 1000 Liter",
+    "preis": "893,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7f/7fc63ca1-49b9-4765-90d0-a3a397351f79?rule=$_57.AUTO"
+  },
+  {
+    "id": "3500767385",
+    "titel": "Rädlinger Tilt mit Schnellwechsler MS 03 | für Bagger 1,6 bis 2,6",
+    "preis": "3.832,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2c/2c4b222b-b0ba-44c6-84b0-411f2a35d8af?rule=$_57.AUTO"
+  },
+  {
+    "id": "3500773030",
+    "titel": "Rädlinger Tilt 390 MS01 für Baggerklasse 1 - 1,8 t",
+    "preis": "3.285,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b3/b323690b-429c-4e19-95a1-38098bc61110?rule=$_57.AUTO"
+  },
+  {
+    "id": "3554055995",
+    "titel": "FSI B22 Stubbenfräse – Baujahr 2021",
+    "preis": "8.925,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b0/b0fdabc5-3040-454e-b755-bded2ca0f1df?rule=$_57.AUTO"
+  },
+  {
+    "id": "3554027406",
+    "titel": "Husqvarna R 200iX",
+    "preis": "6.134,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/f2/f283059d-745f-464d-b8c6-3eee7a4267df?rule=$_57.AUTO"
+  },
+  {
+    "id": "3553960981",
+    "titel": "Norton Baukreissäge CWT 450",
+    "preis": "1.012,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2d/2d6957b0-3817-4c8b-a81d-aa450d5f7e76?rule=$_57.AUTO"
+  },
+  {
+    "id": "3496221637",
+    "titel": "ALLU VS 3-05 FS15 Siebschaufel – Baujahr 2023",
+    "preis": "10.413,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/cd/cdbc0062-230e-427b-b4fe-272193a4addc?rule=$_57.AUTO"
+  },
+  {
+    "id": "3493570762",
+    "titel": "Steinrex Kleinkran basic 2.0",
+    "preis": "16.850,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a7/a77c25f5-2e30-431d-b78f-c904f7618b9d?rule=$_57.AUTO"
+  },
+  {
+    "id": "3547472238",
+    "titel": "Manitou MT 732 ST3B Comfort",
+    "preis": "47.481,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/10/10299360-8b8f-4991-8d07-823821a40daa?rule=$_57.AUTO"
+  },
+  {
+    "id": "3547447376",
+    "titel": "Avant Multifunktionslader 225",
+    "preis": "26.061,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/64/649ed096-ae43-4f96-bd15-4ed4b485e723?rule=$_57.AUTO"
+  },
+  {
+    "id": "3547430933",
+    "titel": "Avant Heckenschneider S30, 1300 mm Arbeitsbreite, Baujahr 2025",
+    "preis": "5.653,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7ce48d84-af53-4845-bda3-872fc027505d?rule=$_57.AUTO"
+  },
+  {
+    "id": "3487648382",
+    "titel": "Reich Streifenmagazinnagler 3541",
+    "preis": "380,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bb/bbab1a49-4582-4292-86e9-e29408766aa6?rule=$_57.AUTO"
   }
 ]
