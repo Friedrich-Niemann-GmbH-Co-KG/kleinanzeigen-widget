@@ -2,18 +2,14 @@
 name: Kleinanzeigen synchronisieren
 
 on:
-  # Manueller Start jederzeit möglich
   workflow_dispatch:
 
-  # Automatische Synchronisierung einmal täglich
   schedule:
     - cron: "17 3 * * *"
 
-# Berechtigung zum Aktualisieren der ads.json
 permissions:
   contents: write
 
-# Verhindert parallele Synchronisierungen
 concurrency:
   group: kleinanzeigen-sync
   cancel-in-progress: false
@@ -24,17 +20,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository herunterladen
       - name: Repository laden
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
-      # 2. Python installieren
+      - name: Repository aktualisieren
+        run: |
+          git pull --rebase origin main
+
       - name: Python installieren
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 3. Kleinanzeigen über API abrufen
       - name: Anzeigen abrufen
         env:
           KLAZ_API_KEY: ${{ secrets.KLAZ_API_KEY }}
@@ -42,7 +42,6 @@ jobs:
         run: |
           python sync.py
 
-      # 4. Aktualisierte Anzeigen speichern
       - name: Anzeigen speichern
         run: |
           git config user.name "github-actions[bot]"
@@ -52,13 +51,12 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Automatische Kleinanzeigen-Aktualisierung"
-            git push
+            git pull --rebase origin main
+            git push origin main
           else
             echo "Keine Änderungen an den Anzeigen."
           fi
 
-      # 5. Abschlussmeldung
       - name: Synchronisierung abgeschlossen
         run: |
           echo "Kleinanzeigen-Synchronisierung erfolgreich."
-          echo "Nächste automatische Ausführung in ca. 24 Stunden."
