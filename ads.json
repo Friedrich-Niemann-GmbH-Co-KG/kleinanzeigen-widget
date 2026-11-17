@@ -1,5 +1,13 @@
 [
   {
+    "id": "3487648382",
+    "titel": "Reich Streifenmagazinnagler 3541",
+    "preis": "380,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bb/bbab1a49-4582-4292-86e9-e29408766aa6?rule=$_57.AUTO",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/reich-streifenmagazinnagler-3541/3487648382-84-26495",
+    "category": "Heimwerken"
+  },
+  {
     "id": "3487639168",
     "titel": "Spit Pulsa 40P+ Gasnagelgerät",
     "preis": "606,00 €",
@@ -174,13 +182,5 @@
     "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7ce48d84-af53-4845-bda3-872fc027505d?rule=$_57.AUTO",
     "url": "https://www.kleinanzeigen.de/s-anzeige/avant-heckenschneider-s30-1300-mm-arbeitsbreite-baujahr-2025/3547430933-276-705",
     "category": "Nutzfahrzeuge & Anhänger"
-  },
-  {
-    "id": "3487648382",
-    "titel": "Reich Streifenmagazinnagler 3541",
-    "preis": "380,00 €",
-    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bb/bbab1a49-4582-4292-86e9-e29408766aa6?rule=$_57.AUTO",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/reich-streifenmagazinnagler-3541/3487648382-84-26495",
-    "category": "Heimwerken"
   }
 ]
