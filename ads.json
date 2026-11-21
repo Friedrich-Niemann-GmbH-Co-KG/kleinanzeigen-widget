@@ -1,5 +1,29 @@
 [
   {
+    "id": "3547472238",
+    "titel": "Manitou MT 732 ST3B Comfort",
+    "preis": "47.481,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/10/10299360-8b8f-4991-8d07-823821a40daa?rule=$_57.AUTO",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/manitou-mt-732-st3b-comfort/3547472238-276-705",
+    "category": "Nutzfahrzeuge & Anhänger"
+  },
+  {
+    "id": "3547430933",
+    "titel": "Avant Heckenschneider S30, 1300 mm Arbeitsbreite, Baujahr 2025",
+    "preis": "5.653,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7ce48d84-af53-4845-bda3-872fc027505d?rule=$_57.AUTO",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/avant-heckenschneider-s30-1300-mm-arbeitsbreite-baujahr-2025/3547430933-276-705",
+    "category": "Nutzfahrzeuge & Anhänger"
+  },
+  {
+    "id": "3547447376",
+    "titel": "Avant Multifunktionslader 225",
+    "preis": "26.061,00 €",
+    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/64/649ed096-ae43-4f96-bd15-4ed4b485e723?rule=$_57.AUTO",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/avant-multifunktionslader-225/3547447376-276-705",
+    "category": "Nutzfahrzeuge & Anhänger"
+  },
+  {
     "id": "3487648382",
     "titel": "Reich Streifenmagazinnagler 3541",
     "preis": "380,00 €",
@@ -157,30 +181,6 @@
     "preis": "16.850,00 €",
     "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a7/a77c25f5-2e30-431d-b78f-c904f7618b9d?rule=$_57.AUTO",
     "url": "https://www.kleinanzeigen.de/s-anzeige/steinrex-kleinkran-basic-2-0/3493570762-276-26495",
-    "category": "Nutzfahrzeuge & Anhänger"
-  },
-  {
-    "id": "3547472238",
-    "titel": "Manitou MT 732 ST3B Comfort",
-    "preis": "47.481,00 €",
-    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/10/10299360-8b8f-4991-8d07-823821a40daa?rule=$_57.AUTO",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/manitou-mt-732-st3b-comfort/3547472238-276-705",
-    "category": "Nutzfahrzeuge & Anhänger"
-  },
-  {
-    "id": "3547447376",
-    "titel": "Avant Multifunktionslader 225",
-    "preis": "26.061,00 €",
-    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/64/649ed096-ae43-4f96-bd15-4ed4b485e723?rule=$_57.AUTO",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/avant-multifunktionslader-225/3547447376-276-705",
-    "category": "Nutzfahrzeuge & Anhänger"
-  },
-  {
-    "id": "3547430933",
-    "titel": "Avant Heckenschneider S30, 1300 mm Arbeitsbreite, Baujahr 2025",
-    "preis": "5.653,00 €",
-    "bild": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7ce48d84-af53-4845-bda3-872fc027505d?rule=$_57.AUTO",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/avant-heckenschneider-s30-1300-mm-arbeitsbreite-baujahr-2025/3547430933-276-705",
     "category": "Nutzfahrzeuge & Anhänger"
   }
 ]
